@@ -259,13 +259,8 @@
         </ul>
       </div>
 
-      <div class="btn-row" style="justify-content:flex-end;">
-        <button class="btn btn-ghost" id="btn-settings" onclick="goToSettings()" aria-label="Open account settings">Open Account Settings</button>
-        <button class="btn btn-danger" id="btn-delete" onclick="openModal()" aria-haspopup="dialog">Delete account</button>
-      </div>
-
       <div class="footer-note">
-        Note: You must be logged in to INKTRAIL to perform the deletion. The "Open Account Settings" button will take you to your account settings page where the Delete account button is available.
+        Note: You must be logged in to INKTRAIL to perform the deletion. Visit your account settings to access the Delete account option.
       </div>
 
       <!-- Modal / Confirmation -->
@@ -321,7 +316,6 @@
     function closeModal() {
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
-      document.getElementById('btn-delete').focus();
     }
 
     function validateConfirmState() {
