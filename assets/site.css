@@ -1,0 +1,65 @@
+/* Shared site styles for INKTRΛIL
+   - Palette and typography are centralized here.
+   - Load fonts via the <link> tag in each HTML file.
+*/
+:root{
+  --bg: hsl(36 22% 94%);       /* cream */
+  --brand-black: hsl(30 6% 7%); /* black */
+  --gold: hsl(38 50% 56%);      /* gold */
+  --muted: rgba(11,11,11,0.56);
+  --radius: 12px;
+  --max-width: 980px;
+  --content-gap: 18px;
+  --safe-sans: "Montserrat", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Page base */
+html,body { height:100%; margin:0; padding:0; background:var(--bg); color:var(--brand-black); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body { font-family: var(--safe-sans); max-width:var(--max-width); margin: 2.5rem auto; padding: 0 16px; box-sizing:border-box; }
+
+/* Header */
+.site-header { position:relative; display:flex; align-items:center; justify-content:center; padding: 12px 8px 8px 8px; }
+.header-inner { width:100%; max-width:880px; margin:0 auto; display:flex; align-items:center; justify-content:center; position:relative; }
+
+/* Full logo */
+.logo-full { max-width:420px; width:70%; height:auto; display:block; object-fit:contain; }
+.logo-fallback { display:none; font-family:var(--heading-serif); font-size:28px; font-weight:700; letter-spacing:0.06em; }
+
+/* Top-right mark */
+.logo-mark { position:absolute; top:8px; right:12px; width:56px; height:56px; object-fit:contain; border-radius:8px; background:transparent; }
+
+/* Typography */
+h1,h2,h3 { font-family:var(--heading-serif); color:var(--brand-black); margin:0 0 8px 0; }
+p, li, a, button { font-family: var(--safe-sans); color:var(--brand-black); line-height:1.6; }
+
+/* Lead & small notes */
+.lead { color:var(--muted); margin-top:6px; }
+.gold { color:var(--gold); font-weight:700; }
+
+/* Buttons */
+.controls { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px; border-radius:10px; font-weight:700; font-size:14px; text-decoration:none; box-sizing:border-box;
+  min-width:120px;
+}
+.btn-primary { background:var(--brand-black); color:var(--bg); }
+.btn-ghost { background:transparent; color:var(--brand-black); border:2px solid rgba(11,11,11,0.07); }
+.btn-danger { background:#dc3545; color:white; }
+
+/* Card / content container */
+.container { max-width:900px; margin: 0 auto; padding: var(--content-gap) 12px; box-sizing:border-box; }
+
+/* Footer */
+.site-footer { margin-top:30px; color:var(--muted); text-align:center; font-size:14px; }
+
+/* Fallback display utility (for download page) */
+html.show-fallback .fallback { display:block; }
+
+/* Responsive */
+@media (max-width:520px) {
+  .logo-full { width:86%; max-width:320px; }
+  .logo-mark { width:44px; height:44px; top:8px; right:10px; }
+  .btn { min-width:110px; padding:9px 12px; font-size:13px; }
+}
