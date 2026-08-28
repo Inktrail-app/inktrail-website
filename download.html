@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INKTRΛIL — Download</title>
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- Fonts: Playfair for headings, Inter for body/buttons (display=swap to avoid blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    /* ===== CONFIG: only edit ANDROID_URL below ===== */
+    const IOS_URL = "https://apps.apple.com/us/app/inktr%CE%BBil/id6799230498";
+    const ANDROID_URL = "GOOGLE_PLAY_URL_PLACEHOLDER"; // <-- Paste your Play Store URL here (include https://)
+    /* =============================================== */
+
+    function isValidUrl(s){
+      try { const u = new URL(s); return u.protocol === "https:" || u.protocol === "http:"; }
+      catch (e) { return false; }
+    }
+
+    const ua = navigator.userAgent || "";
+    const isIPhone = /iPhone/i.test(ua);
+    const isIPad = /iPad/i.test(ua);
+    const isAndroid = /Android/i.test(ua);
+    const isIpadOs = /Macintosh/i.test(ua) && (navigator.maxTouchPoints && navigator.maxTouchPoints > 1);
+    const isIOS = isIPhone || isIPad || isIpadOs;
+
+    (function immediateRedirect(){
+      try {
+        if (isIOS) {
+          // iPhone / iPad -> App Store
+          location.replace(IOS_URL);
+          return;
+        }
+        if (isAndroid) {
+          // Android -> Google Play only if configured & valid
+          if (isValidUrl(ANDROID_URL) && ANDROID_URL !== "GOOGLE_PLAY_URL_PLACEHOLDER") {
+            location.replace(ANDROID_URL);
+            return;
+          } else {
+            console.warn("Google Play URL not configured or invalid; showing fallback.");
+            document.documentElement.classList.add("show-fallback");
+            return;
+          }
+        }
+        // Unknown device (desktop, other) -> show fallback
+        document.documentElement.classList.add("show-fallback");
+      } catch (err) {
+        console.error("Redirect failed:", err);
+        document.documentElement.classList.add("show-fallback");
+      }
+    })();
+  </script>
+
+  <style>
+    /* Palette from your specs:
+       White  : hsl(36 22% 94%)  (background cream)
+       Black  : hsl(30 6% 7%)
+       Gold   : hsl(38 50% 56%)
+    */
+    :root{
+      --bg: hsl(36 22% 94%);
+      --brand-black: hsl(30 6% 7%);
+      --gold: hsl(38 50% 56%);
+      --muted: rgba(11,11,11,0.56);
+      --radius: 12px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    html,body{height:100%; margin:0; background:var(--bg); color:var(--brand-black); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    body{display:flex; align-items:center; justify-content:center; padding:20px; box-sizing:border-box; min-height:100vh;}
+
+    /* Fallback card (hidden by default) */
+    .fallback {
+      display:none;
+      width:100%;
+      max-width:720px;
+      background: #fff;
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: 0 12px 40px rgba(11,11,11,0.08);
+      text-align:center;
+      box-sizing:border-box;
+    }
+    html.show-fallback .fallback { display:block; }
+
+    /* Logo / brand */
+    .logo {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:8px;
+    }
+    .logo img { height:56px; width:auto; display:block; border-radius:6px; object-fit:contain; background:var(--brand-black); }
+    .brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight:700;
+      font-size:20px;
+      letter-spacing:0.08em;
+      color:var(--brand-black);
+    }
+
+    h1 { margin:6px 0 10px 0; font-family: "Playfair Display", serif; font-size:20px; }
+    p.lead { margin:0 0 12px 0; color:var(--muted); font-size:14px; }
+
+    .buttons { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:10px; font-weight:700; font-size:14px; text-decoration:none; min-width:140px;
+      box-sizing:border-box;
+    }
+    .btn-ios { background:var(--brand-black); color:var(--bg); }
+    .btn-android { background:transparent; color:var(--brand-black); border:2px solid rgba(11,11,11,0.07); }
+    .btn-android.disabled { opacity:0.5; pointer-events:none; }
+
+    .note { margin-top:12px; color:var(--muted); font-size:13px; }
+    .gold-accent { color:var(--gold); font-weight:700; margin-top:6px; }
+
+    @media (max-width:420px){
+      .logo img{ height:48px; }
+      .brand{ font-size:18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fallback UI (visible when redirect doesn't occur) -->
+  <main class="fallback" role="main" aria-labelledby="title">
+    <div class="logo" aria-hidden="false">
+      <!-- Prefer the provided full logo; if missing, the browser shows alt text -->
+      <img src="assets/logo-full.png" alt="INKTRΛIL logo (full)" onerror="this.style.display='none'" />
+      <div>
+        <div class="brand">INKTRΛIL</div>
+        <div class="gold-accent">Travel • Tattoo • Stories</div>
+      </div>
+    </div>
+
+    <h1 id="title">Download the INKTRΛIL app</h1>
+    <p class="lead">If the automatic redirect didn't run, choose your store below.</p>
+
+    <nav class="buttons" role="navigation" aria-label="Download links">
+      <a id="btn-ios" class="btn btn-ios" target="_blank" rel="noopener noreferrer" href="#">App Store</a>
+      <a id="btn-android" class="btn btn-android" target="_blank" rel="noopener noreferrer" href="#">Google Play</a>
+    </nav>
+
+    <p class="note">Use this page URL in QR codes: <code>https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;/download.html</code></p>
+  </main>
+
+  <script>
+    (function wireFallbackButtons(){
+      try {
+        const btnIOS = document.getElementById('btn-ios');
+        const btnAndroid = document.getElementById('btn-android');
+        if (btnIOS) { btnIOS.href = IOS_URL; btnIOS.setAttribute('aria-label','Open INKTRΛIL on the App Store'); }
+        if (btnAndroid) {
+          if (isValidUrl(ANDROID_URL) && ANDROID_URL !== "GOOGLE_PLAY_URL_PLACEHOLDER") {
+            btnAndroid.href = ANDROID_URL;
+            btnAndroid.setAttribute('aria-label','Open INKTRΛIL on Google Play');
+          } else {
+            btnAndroid.href = "#";
+            btnAndroid.classList.add('disabled');
+            btnAndroid.textContent = "Google Play (coming soon)";
+            btnAndroid.setAttribute('aria-disabled','true');
+            btnAndroid.title = "Google Play URL not configured yet";
+          }
+        }
+      } catch (e) {
+        console.error("Failed to wire fallback buttons", e);
+      }
+    })();
+  </script>
+</body>
+</html>
