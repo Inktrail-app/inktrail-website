@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>INKTRΛIL — Download</title>
+<meta name="referrer" content="no-referrer" />
+
+<!--
+  INKTRΛIL QR redirect (download.html)
+  - Mobile-first, minimal, zero dependencies.
+  - Edit ONLY the ANDROID_URL value in the CONFIG block below when you have the Play Store link.
+-->
+
+<script>
+/* ======= CONFIG (only edit ANDROID_URL) =======
+   Paste your Google Play URL below, including https://
+   Example:
+     const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.inktrail.app";
+*/
+const IOS_URL = "https://apps.apple.com/us/app/inktr%CE%BBil/id6799230498";
+const ANDROID_URL = "GOOGLE_PLAY_URL_PLACEHOLDER";
+/* ============================================== */
+
+/* tiny URL validator */
+function isValidUrl(s) {
+  try { const u = new URL(s); return u.protocol === "https:" || u.protocol === "http:"; }
+  catch (e) { return false; }
+}
+
+/* Detect platform via user agent + small iPadOS touch check:
+   - iPhone -> iOS
+   - iPad -> iOS
+   - iPadOS 13+ might show "Macintosh" in UA; detect via maxTouchPoints
+   - Android -> Android
+   NOTE: detection is intentionally simple and fast for QR use.
+*/
+const ua = navigator.userAgent || "";
+const isIPhone = /iPhone/i.test(ua);
+const isIPad = /iPad/i.test(ua);
+const isAndroid = /Android/i.test(ua);
+const isIpadOs = /Macintosh/i.test(ua) && (navigator.maxTouchPoints && navigator.maxTouchPoints > 1);
+const isIOS = isIPhone || isIPad || isIpadOs;
+
+/* Immediately redirect if device is known.
+   We use location.replace() so the redirect doesn't create an extra history entry.
+   If Android URL is missing/invalid we show the fallback page instead of redirecting to a broken link.
+   If device cannot be identified, we show the fallback UI.
+*/
+(function immediateRedirect(){
+  try {
+    if (isIOS) {
+      location.replace(IOS_URL);
+      return;
+    }
+    if (isAndroid) {
+      if (isValidUrl(ANDROID_URL) && ANDROID_URL !== "GOOGLE_PLAY_URL_PLACEHOLDER") {
+        location.replace(ANDROID_URL);
+        return;
+      } else {
+        // Play URL not set / invalid: show fallback UI
+        console.warn("Google Play URL missing or invalid — showing fallback UI.");
+        document.documentElement.classList.add("show-fallback");
+        return;
+      }
+    }
+    // Unknown/desktop: show fallback UI
+    document.documentElement.classList.add("show-fallback");
+  } catch (err) {
+    console.error("Redirect failed:", err);
+    document.documentElement.classList.add("show-fallback");
+  }
+})();
+</script>
+
+<style>
+/* Mobile-first, extremely lightweight styling
+   Palette: black, cream (off-white), subtle gold accent
+*/
+:root{
+  --bg: #fbf8f3;      /* cream */
+  --card: #ffffff;
+  --text: #0b0b0b;    /* black */
+  --muted: #6b6b6b;
+  --gold: #b98b34;
+  --radius: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+html,body{height:100%; margin:0; background:var(--bg); color:var(--text);}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Fallback card is hidden by default; shown when html.show-fallback is present */
+.fallback {
+  display:none;
+  width:100%;
+  max-width:640px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+html.show-fallback .fallback { display:block; }
+
+.logo { display:inline-flex; align-items:center; gap:12px; margin-bottom:8px; }
+.logo svg { height:46px; width:auto; display:block; }
+.brand { font-weight:800; letter-spacing:0.08em; font-size:20px; }
+
+/* Text */
+h1 { margin:6px 0 8px 0; font-size:18px; }
+.lead { margin:0 0 12px 0; color:var(--muted); font-size:14px; }
+
+/* Buttons */
+.buttons { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 14px; border-radius:10px; font-weight:800; font-size:14px;
+  text-decoration:none; box-sizing:border-box;
+}
+.btn-ios { background:var(--text); color:#fff; }
+.btn-android { background:transparent; color:var(--text); border:2px solid rgba(11,11,11,0.07); }
+.btn-android.disabled { opacity:0.5; pointer-events:none; }
+
+/* Small caption */
+.note { margin-top:12px; color:var(--muted); font-size:13px; }
+
+/* Desktop tweaks */
+@media (min-width:520px){
+  .logo svg { height:56px; }
+  .brand { font-size:22px; }
+}
+</style>
+</head>
+<body>
+  <!-- Fallback UI: shown when redirect is not performed -->
+  <main class="fallback" role="main" aria-labelledby="title">
+    <div class="logo" aria-hidden="false">
+      <!-- Inline SVG mark to avoid external assets -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="10" fill="#0b0b0b"/>
+        <path d="M18 44c5-8 22-24 28-28 0 0-2 16-6 22-6 9-22 14-22 14z" fill="#fff"/>
+        <circle cx="46" cy="18" r="4" fill="#b98b34"/>
+      </svg>
+      <div>
+        <div class="brand">INKTRΛIL</div>
+      </div>
+    </div>
+
+    <h1 id="title">Download the INKTRΛIL app</h1>
+    <p class="lead">If the automatic redirect did not occur, choose your store below.</p>
+
+    <nav class="buttons" role="navigation" aria-label="Download links">
+      <a id="btn-ios" class="btn btn-ios" target="_blank" rel="noopener noreferrer" href="#" aria-label="Open INKTRΛIL on the App Store">App Store</a>
+      <a id="btn-android" class="btn btn-android" target="_blank" rel="noopener noreferrer" href="#" aria-label="Open INKTRΛIL on Google Play">Google Play</a>
+    </nav>
+
+    <p class="note">Use this page URL in your QR code: https://&lt;username&gt;.github.io/&lt;repo&gt;/download.html</p>
+  </main>
+
+<script>
+/* Wire fallback buttons to the same config variables and handle missing/invalid Android URL gracefully */
+(function wireFallback() {
+  try {
+    var btnIOS = document.getElementById('btn-ios');
+    var btnAndroid = document.getElementById('btn-android');
+
+    if (btnIOS) {
+      btnIOS.href = IOS_URL;
+    }
+
+    if (btnAndroid) {
+      if (isValidUrl(ANDROID_URL) && ANDROID_URL !== "GOOGLE_PLAY_URL_PLACEHOLDER") {
+        btnAndroid.href = ANDROID_URL;
+      } else {
+        btnAndroid.href = "#";
+        btnAndroid.classList.add('disabled');
+        btnAndroid.textContent = "Google Play (coming soon)";
+        btnAndroid.setAttribute('aria-disabled', 'true');
+        btnAndroid.title = "Google Play URL not configured yet";
+      }
+    }
+  } catch (e) {
+    console.error("Failed to wire fallback buttons:", e);
+  }
+})();
+</script>
+</body>
+</html>
