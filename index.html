@@ -4,81 +4,78 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>INKTRΛIL</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg: #fbf8f3;      /* cream */
-      --text: #0b0b0b;    /* black */
-      --muted: #6b6b6b;
-      --gold: #b98b34;    /* subtle gold */
-      --accent: #111;
-      --radius: 6px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --bg: hsl(36 22% 94%);
+      --brand-black: hsl(30 6% 7%);
+      --gold: hsl(38 50% 56%);
+      --muted: rgba(11,11,11,0.56);
+      --radius: 8px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    html,body{height:100%; margin:0; background:var(--bg); color:var(--text);}
-    body { max-width:800px; margin:3rem auto; padding:0 1rem; line-height:1.6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-    header { text-align:center; margin-bottom:2rem; }
-    .buttons { margin: 0.5rem 0; display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; }
-    a.button {
-      display:inline-block;
-      padding:0.6rem 1rem;
-      color:white;
-      text-decoration:none;
-      border-radius:var(--radius);
-      font-weight:700;
-      font-size:0.95rem;
-      box-shadow: 0 6px 18px rgba(11,11,11,0.06);
-    }
-    a.button.primary { background:var(--accent); }
-    a.button.ghost { background:transparent; color:var(--text); border:2px solid rgba(11,11,11,0.07); }
-    a.button.danger { background:#dc3545; }
-    .brand { font-weight:900; letter-spacing:0.08em; font-size:1.25rem; display:block; color:var(--text); }
-    .tagline { color:var(--muted); margin-top:6px; font-size:0.98rem; }
-    main { margin-top:1.5rem; }
-    footer { margin-top:3rem; font-size:0.9rem; color:var(--muted); text-align:center; }
-    .gold-note { color:var(--gold); font-weight:700; font-size:0.95rem; margin-top:8px; }
-    @media (max-width:420px){
-      body { margin:2rem 0; padding:0 14px; }
-      a.button { padding:0.5rem .8rem; font-size:0.92rem; }
+    html,body{height:100%; margin:0; background:var(--bg); color:var(--brand-black);}
+    body{max-width:980px; margin:3rem auto; padding:0 16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    header{text-align:center; margin-bottom:1.75rem;}
+    .logo { display:inline-flex; gap:12px; align-items:center; justify-content:center; margin-bottom:8px; }
+    .logo img { height:64px; width:auto; display:block; object-fit:contain; }
+    .brand { font-family:"Playfair Display", serif; font-weight:700; font-size:28px; letter-spacing:0.08em; }
+    .tagline { color:var(--muted); margin-top:6px; font-size:15px; }
+    .gold { color:var(--gold); font-weight:700; margin-top:8px; }
+
+    .buttons { margin-top:12px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+    a.btn{ text-decoration:none; display:inline-flex; gap:8px; align-items:center; justify-content:center;
+          padding:10px 14px; border-radius:10px; font-weight:700; font-size:14px; box-sizing:border-box;}
+    a.primary { background:var(--brand-black); color:var(--bg); }
+    a.ghost { background:transparent; color:var(--brand-black); border:2px solid rgba(11,11,11,0.07); }
+    a.danger { background:#dc3545; color:white; }
+
+    main{ margin-top:1.25rem; }
+    footer{ margin-top:2rem; text-align:center; color:var(--muted); font-size:14px; }
+
+    @media (max-width:480px){
+      .logo img{ height:56px; }
+      .brand { font-size:22px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <span class="brand">INKTRΛIL</span>
-    <div class="tagline">Travel • Tattoo • Stories</div>
-    <div class="gold-note">Scan the QR at events or use the Download link below</div>
+    <div class="logo">
+      <img src="assets/logo-full.png" alt="INKTRΛIL logo" onerror="this.style.display='none'">
+      <div>
+        <div class="brand">INKTRΛIL</div>
+        <div class="tagline">Travel • Tattoo • Stories</div>
+        <div class="gold">Scan the QR at events</div>
+      </div>
+    </div>
 
-    <div class="buttons" aria-hidden="false">
-      <!-- Download (QR landing) -->
-      <a class="button primary" href="download.html" title="Download INKTRΛIL" aria-label="Download INKTRΛIL">Download</a>
-
-      <!-- Legal / support -->
-      <a class="button ghost" href="terms.html" rel="noopener noreferrer" target="_blank">Terms</a>
-      <a class="button ghost" href="privacy.html" rel="noopener noreferrer" target="_blank">Privacy</a>
-      <a class="button ghost" href="support.html" rel="noopener noreferrer" target="_blank">Support</a>
-
-      <!-- Delete account link (keeps your previous link) -->
-      <a class="button danger" href="delete-account.html" rel="noopener noreferrer" target="_blank">Delete account</a>
+    <div class="buttons" role="navigation" aria-label="Main links">
+      <a class="btn primary" href="download.html" title="Download INKTRΛIL" aria-label="Download INKTRΛIL">Download</a>
+      <a class="btn ghost" href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+      <a class="btn ghost" href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+      <a class="btn ghost" href="support.html" target="_blank" rel="noopener noreferrer">Support</a>
+      <a class="btn danger" href="delete-account.html" target="_blank" rel="noopener noreferrer">Delete account</a>
     </div>
   </header>
 
   <main>
     <section>
-      <h2>About</h2>
-      <p>This site hosts INKTRΛIL's legal and support pages and a QR landing page for mobile users. Point event QR codes to <code>/download.html</code> so visitors are automatically redirected to the right app store.</p>
-      <ul>
-        <li><strong>QR landing (use in QR):</strong> <code>/download.html</code></li>
-        <li><strong>App Store:</strong> redirects to your iOS store link</li>
-        <li><strong>Google Play:</strong> will redirect when the Play URL is configured in <code>download.html</code></li>
+      <h2 style="font-family:'Playfair Display', serif; font-weight:700; font-size:20px; margin-bottom:8px;">About</h2>
+      <p style="color:var(--muted);">This repo serves INKTRΛIL's public pages and a QR landing page. Point printed event QR codes to <code>/download.html</code> so visitors are redirected to the correct app store automatically.</p>
+      <ul style="color:var(--muted)">
+        <li>QR landing (use in QR): <code>/download.html</code></li>
+        <li>iOS → App Store (configured in download.html)</li>
+        <li>Android → Google Play URL to paste into download.html later</li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>Published via GitHub Pages</p>
-  </footer>
-</body>
-</html>
     <p>Published via GitHub Pages</p>
   </footer>
 </body>
