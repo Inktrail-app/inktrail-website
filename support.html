@@ -3,34 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Support — Inktrail</title>
-  <style>
-    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #111; }
-    header { border-bottom: 1px solid #eee; margin-bottom: 24px; }
-    h1 { margin: 0 0 8px 0; }
-    .card { background: #fff; border: 1px solid #eee; padding: 18px; border-radius: 8px; }
-    a.button { display: inline-block; padding: 8px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 6px; }
-  </style>
+  <title>Support — INKTRΛIL</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header>
-    <h1>Inktrail Support</h1>
-    <p>Need help? Here’s how to contact us and find resources.</p>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="logo-full" onerror="this.style.display='none'; document.querySelector('.logo-fallback') && (document.querySelector('.logo-fallback').style.display='block')">
+      <div class="logo-fallback" aria-hidden="true">INKTRΛIL</div>
+      <img src="assets/logo-mark.jpg" alt="INKTRΛIL mark" class="logo-mark" onerror="this.style.display='none'">
+    </div>
   </header>
 
-  <main class="card">
-    <h2>Contact</h2>
-    <p>For any technical questions or issues, email us at: <a href="mailto:inktrailapp@gmail.com">inktrailapp@gmail.com</a></p>
+  <main class="container" role="main">
+    <h1 style="font-family:var(--heading-serif); font-weight:700; margin-bottom:8px;">Support</h1>
+    <p class="lead">Need help? Reach out to <a href="mailto:inktrailapp@gmail.com">inktrailapp@gmail.com</a>.</p>
 
-
-    <h2>Report a bug</h2>
-    <p>To report a bug, open an issue on our GitHub repository or send an email with a detailed description and steps to reproduce the problem.</p>
-
-    <p style="margin-top:16px;"><a class="button" href="mailto:inktrailapp@gmail.com">Contact support</a></p>
+    <div class="card" style="margin-top:12px;">
+      <h2 style="font-family:var(--heading-serif);">Contact</h2>
+      <p>For technical questions, send an email describing the issue and steps to reproduce.</p>
+      <p style="margin-top:12px;"><a class="btn btn-primary" href="mailto:inktrailapp@gmail.com">Contact support</a></p>
+    </div>
   </main>
 
-  <footer style="margin-top:28px; color:#666; font-size:90%; text-align:center;">
-    <p>&copy; Inktrail</p>
-  </footer>
+  <footer class="site-footer">&copy; INKTRΛIL</footer>
+
+  <script src="assets/tables.js" defer></script>
 </body>
 </html>
