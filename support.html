@@ -1,39 +1,207 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Support — INKTRΛIL</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support & Contact — INKTRΛIL</title>
+  <meta name="description" content="Get help with your INKTRΛIL account, app, or artist profile. Reach our dedicated support team via email or WhatsApp." />
+  <link rel="canonical" href="https://inktrailapp.com/support.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="INKTRΛIL" />
+  <meta property="og:title" content="Support & Contact — INKTRΛIL" />
+  <meta property="og:description" content="Need help with INKTRΛIL? Reach our team via email or WhatsApp." />
+  <meta property="og:url" content="https://inktrailapp.com/support.html" />
+  <meta property="og:image" content="https://inktrailapp.com/assets/logo-mark.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/site.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/site.css" />
+
+  <style>
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 36px 0;
+    }
+    .support-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .support-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+    .support-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="logo-full" onerror="this.style.display='none'; document.querySelector('.logo-fallback') && (document.querySelector('.logo-fallback').style.display='block')">
-      <div class="logo-fallback" aria-hidden="true">INKTRΛIL</div>
-      <img src="assets/logo-mark.jpg" alt="INKTRΛIL mark" class="logo-mark" onerror="this.style.display='none'">
+  <header class="site-header subpage-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="INKTRΛIL Homepage">
+        <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="brand-logo-img" width="220" height="40" />
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm" href="index.html">← Back to Home</a>
+        <a class="btn btn-primary btn-sm" href="https://d72921c3b2.draftbit.dev/search" target="_blank" rel="noopener noreferrer">Find Artist</a>
+      </div>
     </div>
   </header>
 
-  <main class="container" role="main">
-    <h1 style="font-family:var(--heading-serif); font-weight:700; margin-bottom:8px;">Support</h1>
-    <p class="lead">Need help? Reach out to <a href="mailto:inktrailapp@gmail.com">inktrailapp@gmail.com</a>.</p>
+  <main class="page-container" role="main">
+    <div class="page-header">
+      <span class="eyebrow">CUSTOMER CARE & ARTIST HELP</span>
+      <h1>How Can We Help You?</h1>
+      <p class="lead">Have a question regarding your account, studio certification, or booking? Our team is here to assist.</p>
+    </div>
 
-    <div class="card" style="margin-top:12px;">
-      <h2 style="font-family:var(--heading-serif);">Contact</h2>
-      <p>For technical questions, send an email describing the issue and steps to reproduce.</p>
-      <p style="margin-top:12px;"><a class="btn btn-primary" href="mailto:inktrailapp@gmail.com">Contact support</a></p>
+    <div class="support-grid">
+      <!-- Email Support Card -->
+      <article class="support-card">
+        <div>
+          <div class="card-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <h3>Email Support</h3>
+          <p style="color:var(--text-muted); margin-bottom:20px;">
+            For account inquiries, technical bug reports, studio certification questions, or billing assistance.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="mailto:inktrailapp@gmail.com" style="width:100%;">
+            Email inktrailapp@gmail.com
+          </a>
+        </div>
+      </article>
+
+      <!-- WhatsApp Direct Contact Card -->
+      <article class="support-card">
+        <div>
+          <div class="card-icon-wrap" aria-hidden="true" style="background: rgba(37, 211, 102, 0.12); color: #128c7e;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+          <h3>WhatsApp Assistance</h3>
+          <p style="color:var(--text-muted); margin-bottom:20px;">
+            Quick questions for traveling users and urgent artist support during destination sessions.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-secondary" href="https://wa.me/33689978110" target="_blank" rel="noopener noreferrer" style="width:100%;">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="content-card" style="margin-top: 36px;">
+      <h2>Reporting Technical Issues</h2>
+      <p>When reporting a technical problem, please include:</p>
+      <ul>
+        <li>Your operating system (iOS, Android, or Web browser version).</li>
+        <li>Your registered account email (if applicable).</li>
+        <li>A concise description of the steps that led to the issue.</li>
+        <li>Screenshots or error messages where helpful.</li>
+      </ul>
+      <div class="contact-box">
+        <strong>Looking to manage your data?</strong>
+        <p style="margin: 6px 0 0 0; font-size:0.925rem;">
+          To request permanent account or data deletion in compliance with store regulations, please visit our <a href="delete-account.html" style="color:var(--gold-dark); text-decoration:underline;">Account Deletion page</a>.
+        </p>
+      </div>
     </div>
   </main>
 
-  <footer class="site-footer">&copy; INKTRΛIL</footer>
+  <!-- Global Footer (SOW Section 7) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="footer-logo" width="200" height="36" />
+          <p class="footer-about">
+            InkTrail is the dedicated platform connecting travelers with certified tattoo artists worldwide. Travel the globe, discover genuine talent, and get inked with peace of mind.
+          </p>
+        </div>
 
-  <script src="assets/tables.js" defer></script>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="https://d72921c3b2.draftbit.dev/search" target="_blank" rel="noopener noreferrer">Find Artist</a></li>
+            <li><a href="https://d72921c3b2.draftbit.dev/portal" target="_blank" rel="noopener noreferrer">Artist Portal</a></li>
+            <li><a href="download.html">Download App</a></li>
+            <li><a href="index.html#certification">Certification Standard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Help & Support</a></li>
+            <li><a href="delete-account.html">Delete Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect with Us</h4>
+          <p style="font-size:0.875rem; color:rgba(255,255,255,0.65); margin-bottom:12px;">
+            Follow our journey and stay updated with featured international artists.
+          </p>
+          <div class="social-links-row" aria-label="Social media channels">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/inktrail.app/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow InkTrail on Instagram" data-content="social-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@inktrail.app?lang=fr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow InkTrail on TikTok" data-content="social-tiktok">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.89-4.49V8.69a8.18 8.18 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.89-.12z"/></svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/33689978110" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Chat with InkTrail on WhatsApp" data-content="social-whatsapp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+
+            <!-- Support Email -->
+            <a href="mailto:inktrailapp@gmail.com" class="social-btn" aria-label="Email InkTrail Support">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 INKTRΛIL. All rights reserved.</div>
+        <div>Connecting travelers & tattoo artists worldwide.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/content.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

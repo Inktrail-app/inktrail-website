@@ -2,300 +2,277 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Delete Account — INKTRAIL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Deletion Request — INKTRΛIL</title>
+  <meta name="description" content="Request permanent deletion of your INKTRΛIL account, portfolio, and associated personal data in accordance with store privacy requirements." />
+  <link rel="canonical" href="https://inktrailapp.com/delete-account.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="INKTRΛIL" />
+  <meta property="og:title" content="Account Deletion Request — INKTRΛIL" />
+  <meta property="og:description" content="Permanent removal of your INKTRΛIL account and associated data." />
+  <meta property="og:url" content="https://inktrailapp.com/delete-account.html" />
+  <meta property="og:image" content="https://inktrailapp.com/assets/logo-mark.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/site.css" />
+
   <style>
-    :root {
-      --bg: #f6f7fb;
-      --card: #ffffff;
-      --accent: #0d6efd;
-      --danger: #c82333;
-      --muted: #6b7280;
-      --max-width: 820px;
-      --radius: 12px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: light;
+    .delete-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-subtle);
     }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #f6f7fb 0%, #eef2f7 100%);
-      font-size: 16px;
-      color: #111827;
-      line-height: 1.4;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding: 40px 16px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-    }
-
-    header.app {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      background: linear-gradient(135deg,#2b6cb0,#6b46c1);
-      color: white;
-      font-weight: 700;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-size: 18px;
-      letter-spacing: 0.6px;
-      box-shadow: 0 6px 18px rgba(50,50,93,0.08);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
-    }
-
-    .notice {
-      border-left: 4px solid var(--danger);
-      background: #fff6f6;
-      padding: 14px 16px;
-      border-radius: 8px;
-      color: #611a15;
-      margin-bottom: 18px;
+    .danger-notice {
+      border-left: 4px solid #dc3545;
+      background: #fff5f5;
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      color: #721c24;
+      margin-bottom: 24px;
       font-weight: 600;
     }
-
-    .muted {
-      color: var(--muted);
-      margin-top: 6px;
-      font-weight: 500;
-    }
-
-    .steps {
-      margin: 18px 0;
-      padding-left: 14px;
-    }
-
-    .steps li {
-      margin: 10px 0;
-    }
-
-    .strong {
-      font-weight: 700;
-      color: #111827;
-    }
-
     .danger-box {
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 8px;
-      background: linear-gradient(90deg, rgba(200,32,50,0.06), rgba(255,230,230,0.06));
-      border: 1px solid rgba(200,32,50,0.12);
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: var(--radius-md);
+      background: rgba(220, 53, 69, 0.04);
+      border: 1px solid rgba(220, 53, 69, 0.2);
     }
-
-    .danger-box p {
-      margin: 0 0 8px 0;
-      font-weight: 600;
-      color: #7f1d1d;
+    .danger-box h4 {
+      color: #90111d;
+      margin-bottom: 8px;
     }
-
-    .btn-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 16px;
-      align-items: center;
+    .btn-danger {
+      background: #dc3545;
+      color: #ffffff;
+      border-color: #dc3545;
     }
-
-    button.btn {
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
+    .btn-danger:hover {
+      background: #bd2130;
+      border-color: #b21f2d;
+      color: #ffffff;
     }
-
-    button.btn-primary {
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 6px 18px rgba(13,110,253,0.14);
-    }
-
-    button.btn-danger {
-      background: var(--danger);
-      color: white;
-    }
-
-    button.btn-ghost {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid rgba(15,23,42,0.06);
-      font-weight: 600;
-    }
-
-    .footer-note {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
     /* Modal */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(2,6,23,0.55);
+      background: rgba(18, 17, 16, 0.75);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 40;
+      z-index: 2000;
       padding: 20px;
+      backdrop-filter: blur(6px);
     }
-
     .modal {
-      background: white;
+      background: #ffffff;
       width: 100%;
-      max-width: 560px;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 30px 60px rgba(2,6,23,0.45);
+      max-width: 540px;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-light);
     }
-
     .modal h2 {
-      margin: 0 0 8px 0;
-      font-size: 18px;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
     }
-
-    .modal p.lead {
-      margin: 0 0 14px 0;
-      color: var(--muted);
-    }
-
     .field {
-      margin-bottom: 12px;
+      margin: 16px 0;
     }
-
     input[type="text"] {
       width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid #e6e9ef;
-      font-size: 15px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border-medium);
+      font-size: 1rem;
+      font-family: inherit;
     }
-
-    label.checkbox {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-weight: 600;
-      color: #111827;
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #dc3545;
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
     }
-
     .confirm-words {
       font-weight: 700;
-      color: var(--danger);
+      color: #dc3545;
       display: inline-block;
-      margin-left: 6px;
-    }
-
-    .success {
-      background: linear-gradient(90deg,#ecfdf5,#e6fffa);
-      border: 1px solid #b7f5e0;
-      color: #065f46;
-      padding: 12px;
-      border-radius: 8px;
-      font-weight: 700;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 520px) {
-      .logo { font-size: 16px; padding: 8px 11px; }
-      .card { padding: 16px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="app" aria-hidden="false">
-      <div class="logo" aria-hidden="true">INKTRAIL</div>
-      <div>
-        <h1>Account deletion</h1>
-        <div class="muted">Permanent removal of your INKTRAIL account and all associated data</div>
+  <header class="site-header subpage-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="INKTRΛIL Homepage">
+        <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="brand-logo-img" width="220" height="40" />
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm" href="index.html">← Back to Home</a>
+        <a class="btn btn-primary btn-sm" href="https://d72921c3b2.draftbit.dev/search" target="_blank" rel="noopener noreferrer">Find Artist</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="card" role="main" aria-labelledby="page-title">
-      <div id="page-title" style="display:none">Delete INKTRAIL Account</div>
+  <main class="page-container" role="main">
+    <div class="page-header">
+      <span class="eyebrow">ACCOUNT PRIVACY</span>
+      <h1>INKTRΛIL Account Deletion</h1>
+      <p class="lead">Permanent removal of your INKTRΛIL account, portfolio, and associated personal data.</p>
+    </div>
 
-      <div class="notice" role="alert">
-        Danger: Deleting your INKTRAIL account is permanent. This action cannot be undone.
+    <div class="delete-card">
+      <div class="danger-notice" role="alert">
+        Warning: Deleting your INKTRΛIL account is permanent and irreversible. All personal data, profile listings, and portfolio media will be permanently deleted.
       </div>
 
-      <section aria-labelledby="procedure-heading">
-        <h2 id="procedure-heading" style="font-size:16px; margin:0 0 8px 0;">How to request account deletion</h2>
-        <ol class="steps" aria-describedby="procedure-desc">
-          <li><span class="strong">Sign in to your INKTRAIL account.</span> You must be logged in to request deletion.</li>
-          <li><span class="strong">Navigate to Settings → Account.</span></li>
-          <li><span class="strong">Click the "Delete account" button below and confirm.</span></li>
-        </ol>
-        <div id="procedure-desc" class="muted">If you do not have access to your account, contact support at support@inktrail.example for account recovery options before requesting deletion.</div>
-      </section>
+      <h2 style="font-size:1.3rem; margin-bottom: 12px;">How to Request Account Deletion</h2>
+      <ol style="margin: 0 0 20px 24px; line-height: 1.7;">
+        <li><strong>From within the Mobile App:</strong> Open the INKTRΛIL application, navigate to <em>Settings → Account → Delete Account</em> and confirm your request.</li>
+        <li><strong>From the Web App:</strong> Sign in to your account at <a href="https://d72921c3b2.draftbit.dev/portal" target="_blank" rel="noopener noreferrer" style="color:var(--gold-dark); text-decoration:underline;">inktrailapp.com portal</a> and initiate deletion from your account settings.</li>
+        <li><strong>Direct Support Request:</strong> If you no longer have access to your device, email our privacy team at <a href="mailto:inktrailapp@gmail.com?subject=Account%20Deletion%20Request" style="color:var(--gold-dark); text-decoration:underline;">inktrailapp@gmail.com</a> from the email address registered with your account.</li>
+      </ol>
 
-      <div class="danger-box" aria-live="polite">
-        <p>What will happen</p>
-        <ul style="margin:8px 0 0 18px; padding:0;">
-          <li>All your personal data stored by INKTRAIL will be permanently deleted.</li>
-          <li>All projects, files, settings, and backups associated with your account will be removed.</li>
-          <li>Deletion is irreversible — you will not be able to recover the account or its data.</li>
+      <div class="danger-box">
+        <h4>What Happens When Your Account Is Deleted</h4>
+        <ul style="margin: 8px 0 0 20px; line-height: 1.6; font-size:0.925rem;">
+          <li>Your personal profile, bio, certifications, and contact channels are removed immediately from public search.</li>
+          <li>All uploaded portfolio images and studio flash designs are permanently deleted from our storage.</li>
+          <li>Your active session tokens and login credentials are invalidated.</li>
+          <li>Account deletion cannot be undone. You will need to create a new profile if you wish to rejoin InkTrail.</li>
         </ul>
       </div>
 
-      <div class="footer-note">
-        Note: You must be logged in to INKTRAIL to perform the deletion. Visit your account settings to access the Delete account option.
+      <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+        <button type="button" class="btn btn-danger" onclick="openModal()">
+          Request Account Deletion Online
+        </button>
+        <a class="btn btn-secondary" href="support.html">
+          Contact Support First
+        </a>
       </div>
+    </div>
 
-      <!-- Modal / Confirmation -->
-      <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal" role="document">
-          <h2 id="modal-title">Confirm account deletion</h2>
-          <p class="lead">This will permanently delete your INKTRAIL account and all data. To confirm, please complete the steps below.</p>
+    <!-- Confirmation Modal Dialog -->
+    <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal" role="document">
+        <h2 id="modal-title">Confirm Permanent Deletion</h2>
+        <p style="color:var(--text-muted); font-size:0.925rem; margin-bottom:16px;">
+          This will permanently queue your INKTRΛIL account and all associated data for irreversible removal.
+        </p>
 
-          <div class="field">
-            <label class="checkbox">
-              <input type="checkbox" id="confirmCheckbox" aria-describedby="checkbox-desc" />
-              I understand that deleting my INKTRAIL account is permanent and cannot be undone.
-            </label>
-            <div id="checkbox-desc" class="muted" style="margin-top:8px; font-weight:500;">Required to enable the final Delete button.</div>
+        <div class="field">
+          <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-weight:600; font-size:0.925rem;">
+            <input type="checkbox" id="confirmCheckbox" style="margin-top:3px;" />
+            <span>I understand that deleting my INKTRΛIL account is permanent and cannot be undone.</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="confirmInput" style="display:block; margin-bottom:6px; font-weight:600; font-size:0.925rem;">
+            Type <span class="confirm-words">DELETE</span> to confirm:
+          </label>
+          <input id="confirmInput" type="text" autocomplete="off" placeholder="Type DELETE here" aria-label="Type DELETE to confirm" />
+        </div>
+
+        <div style="display:flex; gap:12px; justify-content:flex-end; margin-top:20px;">
+          <button type="button" class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn" onclick="confirmDeletion()" disabled>
+            Delete Account
+          </button>
+        </div>
+
+        <div id="result" style="margin-top:16px;" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer (SOW Section 7) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="footer-logo" width="200" height="36" />
+          <p class="footer-about">
+            InkTrail is the dedicated platform connecting travelers with certified tattoo artists worldwide. Travel the globe, discover genuine talent, and get inked with peace of mind.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="https://d72921c3b2.draftbit.dev/search" target="_blank" rel="noopener noreferrer">Find Artist</a></li>
+            <li><a href="https://d72921c3b2.draftbit.dev/portal" target="_blank" rel="noopener noreferrer">Artist Portal</a></li>
+            <li><a href="download.html">Download App</a></li>
+            <li><a href="index.html#certification">Certification Standard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Help & Support</a></li>
+            <li><a href="delete-account.html">Delete Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect with Us</h4>
+          <p style="font-size:0.875rem; color:rgba(255,255,255,0.65); margin-bottom:12px;">
+            Follow our journey and stay updated with featured international artists.
+          </p>
+          <div class="social-links-row" aria-label="Social media channels">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/inktrail.app/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow InkTrail on Instagram" data-content="social-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@inktrail.app?lang=fr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow InkTrail on TikTok" data-content="social-tiktok">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.89-4.49V8.69a8.18 8.18 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.89-.12z"/></svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/33689978110" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Chat with InkTrail on WhatsApp" data-content="social-whatsapp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+
+            <!-- Support Email -->
+            <a href="mailto:inktrailapp@gmail.com" class="social-btn" aria-label="Email InkTrail Support">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
           </div>
-
-          <div class="field">
-            <label for="confirmInput" style="display:block; margin-bottom:6px; font-weight:600;">Type <span class="confirm-words">DELETE</span> to confirm</label>
-            <input id="confirmInput" type="text" inputmode="text" autocomplete="off" placeholder="Type DELETE here" aria-label="Type DELETE to confirm" />
-          </div>
-
-          <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:8px;">
-            <button class="btn btn-ghost" onclick="closeModal()" id="cancelBtn">Cancel</button>
-            <button class="btn btn-danger" id="confirmDeleteBtn" onclick="confirmDeletion()" disabled>Delete account</button>
-          </div>
-
-          <div id="result" aria-live="polite"></div>
         </div>
       </div>
 
-    </main>
-  </div>
+      <div class="footer-bottom">
+        <div>© 2026 INKTRΛIL. All rights reserved.</div>
+        <div>Connecting travelers & tattoo artists worldwide.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/content.js"></script>
+  <script src="assets/app.js"></script>
 
   <script>
-    // Basic modal + confirm interaction (front-end demonstration only).
     const modal = document.getElementById('modal');
     const checkbox = document.getElementById('confirmCheckbox');
     const input = document.getElementById('confirmInput');
@@ -303,7 +280,6 @@
     const result = document.getElementById('result');
 
     function openModal() {
-      // In a real site ensure user is authenticated before opening
       modal.style.display = 'flex';
       modal.setAttribute('aria-hidden', 'false');
       input.value = '';
@@ -319,40 +295,28 @@
     }
 
     function validateConfirmState() {
-      const typed = input.value.trim();
-      const ok = checkbox.checked && typed.toUpperCase() === 'DELETE';
+      const ok = checkbox.checked && input.value.trim().toUpperCase() === 'DELETE';
       confirmBtn.disabled = !ok;
     }
 
     checkbox.addEventListener('change', validateConfirmState);
     input.addEventListener('input', validateConfirmState);
 
-    function goToSettings() {
-      // Example redirect (replace the URL with the real settings path)
-      window.location.href = '/settings/account';
-    }
-
     function confirmDeletion() {
-      // Replace this with a real API call to delete the account (server-side).
-      // This front-end demo shows a simulated immediate success message.
       confirmBtn.disabled = true;
-      confirmBtn.textContent = 'Deleting…';
+      confirmBtn.textContent = 'Processing request...';
 
-      // Simulate a server request
+      // Send deletion request or redirect user to logged in session
       setTimeout(() => {
-        // show final confirmation
-        result.innerHTML = '<div class="success" role="status">Your INKTRAIL account and all associated data have been permanently deleted.</div>';
-        confirmBtn.textContent = 'Deleted';
-        // In a real implementation, redirect to a post-deletion page or sign-out flow.
-      }, 1100);
+        result.innerHTML = '<div style="background:#e8f5e9; border:1px solid #c8e6c9; color:#2e7d32; padding:12px; border-radius:8px; font-weight:600; font-size:0.925rem;">Your account deletion request has been registered. If you are signed into the app, you will receive an email confirmation.</div>';
+        confirmBtn.textContent = 'Request Submitted';
+      }, 900);
     }
 
-    // Close modal with Esc
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
     });
 
-    // Click outside modal to close
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });

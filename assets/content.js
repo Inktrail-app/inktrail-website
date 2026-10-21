@@ -1,0 +1,315 @@
+/**
+ * ==============================================================================
+ * INKTRΛIL — Centralized Website Content Configuration
+ * ==============================================================================
+ * This file contains all text, headlines, links, social channels, images, and
+ * SEO configuration for the InkTrail marketing website.
+ *
+ * HOW TO EDIT:
+ * - You can edit any text inside the quotation marks ("...") below.
+ * - To update button destinations, change the "url" property.
+ * - To update social links, change the links in the "social" section.
+ * - Save the file and your changes will update immediately on your website.
+ * - No developer or subscription is required to make content updates!
+ * ==============================================================================
+ */
+
+window.INKTRAIL_CONTENT = {
+  // Website Metadata & SEO
+  meta: {
+    siteTitle: "INKTRΛIL — Connect with Tattoo Artists Worldwide | Travel & Inking Platform",
+    description: "Discover certified tattoo artists, explore authentic styles, and book your next tattoo wherever you travel. The premier global platform connecting travelers and tattoo artists.",
+    canonicalUrl: "https://inktrailapp.com/",
+    siteName: "INKTRΛIL",
+    keywords: "tattoo artists, travel tattoo, find tattoo artist, tattoo directory, guest spot tattoo, ink trail, tattoo styles, fine line tattoo, ink travel"
+  },
+
+  // Brand Identity
+  brand: {
+    name: "INKTRΛIL",
+    tagline: "Travel the World. Discover Your Next Tattoo.",
+    subTagline: "Travel. Discover. Get inked.",
+    logoFull: "assets/logo-parfait-or.jpg",
+    logoMark: "assets/logo-mark.jpg",
+    supportEmail: "inktrailapp@gmail.com"
+  },
+
+  // Primary Call-to-Action Buttons (SOW Section 4)
+  primaryButtons: {
+    findArtist: {
+      label: "Find Artist",
+      url: "https://d72921c3b2.draftbit.dev/search",
+      description: "Directs visitors to search for tattoo artists on the web app"
+    },
+    createProfile: {
+      label: "Create a Profile",
+      url: "https://d72921c3b2.draftbit.dev/portal",
+      description: "Directs tattoo artists to the profile creation portal"
+    },
+    downloadApp: {
+      label: "Download the App",
+      url: "download.html",
+      description: "Directs visitors to mobile app download options"
+    }
+  },
+
+  // Social Media & Contact Links (Verified from scan.page/p/3C3itq)
+  social: {
+    instagram: "https://www.instagram.com/inktrail.app/",
+    tiktok: "https://www.tiktok.com/@inktrail.app?lang=fr",
+    whatsapp: "https://wa.me/33689978110",
+    supportEmail: "mailto:inktrailapp@gmail.com"
+  },
+
+  // App Store Links
+  appLinks: {
+    ios: "https://apps.apple.com/us/app/inktr%CE%BBil/id6799230498",
+    android: "#" // Set to official Google Play URL when published
+  },
+
+  // Hero Section (SOW Section 3.1)
+  hero: {
+    badge: "The Global Tattoo Discovery Network",
+    headline: "Travel the World. Discover Your Next Tattoo.",
+    subtitle: "Discover tattoo artists, explore unique styles, and find your next tattoo wherever your journey takes you.",
+    note: "Connecting travelers with verified tattoo talent across top destinations worldwide."
+  },
+
+  // What Is InkTrail Section (SOW Section 3.2)
+  whatIs: {
+    eyebrow: "WHAT IS INKTRΛIL?",
+    title: "Bridging Wandering Souls & Master Tattoo Artists",
+    lead: "InkTrail is the dedicated global platform engineered specifically for travelers seeking authentic ink and tattoo artists looking to expand their international reach.",
+    description: "Whether you are planning your dream destination piece months in advance or searching for an exceptional resident artist in a city you just landed in, InkTrail strips away the algorithmic noise and connects you directly with verified craftspeople.",
+    pillars: [
+      {
+        icon: "globe",
+        title: "Destination-First Discovery",
+        text: "Search cities across the globe to discover resident artists and guest-spot talent ready to create your next memory."
+      },
+      {
+        icon: "palette",
+        title: "Authentic Styles & Portfolios",
+        text: "Explore curated high-resolution portfolios categorized by technique, style, and artist specialization."
+      },
+      {
+        icon: "shield",
+        title: "Verified Hygiene & Quality",
+        text: "Make informed decisions with artists reviewed for professional hygiene, sterilization, and studio standards."
+      }
+    ]
+  },
+
+  // Benefits for Travelers (SOW Section 3.3)
+  travelerBenefits: {
+    eyebrow: "FOR TRAVELERS & ENTHUSIASTS",
+    title: "Why Travelers Choose InkTrail",
+    subtitle: "Every journey leaves an imprint. Make yours an unforgettable piece of body art with trusted artists worldwide.",
+    items: [
+      {
+        icon: "compass",
+        title: "Discover Tattoo Artists While Traveling",
+        description: "Instantly explore skilled resident artists wherever you are, turning your travel journey into living art."
+      },
+      {
+        icon: "layers",
+        title: "Explore Styles Across Destinations",
+        description: "Browse portfolios filtered by aesthetic—from delicate Fine Line and Micro-Realism to Bold Blackwork and Traditional."
+      },
+      {
+        icon: "bookmark",
+        title: "Inspiration Tied to Travel Memories",
+        description: "Find local cultural inspiration and bespoke flash designs created specifically for travelers seeking lasting souvenirs."
+      },
+      {
+        icon: "sparkles",
+        title: "Uncover Talent Beyond Social Algorithms",
+        description: "Skip sponsored posts and shadowbanned profiles. Discover authentic local studios and independent masters."
+      },
+      {
+        icon: "user-check",
+        title: "Verified Profiles & Transparent Info",
+        description: "Access verified artist portfolios, languages spoken, experience, and direct contact options before booking."
+      }
+    ]
+  },
+
+  // Benefits for Tattoo Artists (SOW Section 3.4)
+  artistBenefits: {
+    eyebrow: "FOR TATTOO ARTISTS & STUDIOS",
+    title: "Grow Your International Clientele",
+    subtitle: "Showcase your craft on a platform built specifically for tattoo artistry. Welcome travelers eager to collect your work.",
+    items: [
+      {
+        icon: "globe-2",
+        title: "International Audience Visibility",
+        description: "Put your portfolio in front of an international community of clients actively traveling to your city."
+      },
+      {
+        icon: "image",
+        title: "Showcase Portfolios & Unique Styles",
+        description: "Present high-resolution artwork, specialized techniques, and verified certifications in an elegant portfolio."
+      },
+      {
+        icon: "map-pin",
+        title: "Reach In-Bound Travelers",
+        description: "Connect with visitors who seek out destination tattoos and value original, high-quality tattoo craftsmanship."
+      },
+      {
+        icon: "smartphone",
+        title: "Build Your Brand Beyond Social Media",
+        description: "Establish a permanent, search-indexed digital presence free from restrictive social algorithms."
+      },
+      {
+        icon: "briefcase",
+        title: "Guest-Spot Opportunities",
+        description: "Discover guest-spot openings and connect with partner studios worldwide (Feature in active development)."
+      },
+      {
+        icon: "award",
+        title: "Early Platform Advantages",
+        description: "Early artist members enjoy priority search visibility, featured placement, and early access to upcoming features."
+      }
+    ],
+    ctaText: "Create a Profile",
+    ctaSubtext: "Free to join • Set up your portfolio in minutes"
+  },
+
+  // InkTrail Certification (SOW Section 3.5 — Verified criteria from actual app)
+  certification: {
+    eyebrow: "TRUST & STANDARDS",
+    title: "The InkTrail Certified Standard",
+    badgeLabel: "INKTRΛIL CERTIFIED",
+    lead: "The InkTrail Certified badge helps travelers identify artists and studios who have been personally reviewed by the InkTrail team.",
+    explanation: "Becoming InkTrail Certified requires a visit from the InkTrail team to verify your studio's hygiene standards, sterilization procedures, safety practices, and professionalism. Artists who meet our standards receive the official INKTRΛIL Certified badge on their profile.",
+    steps: [
+      {
+        number: "01",
+        title: "Application & Studio Details",
+        description: "The artist submits studio location, equipment documentation, and portfolio through the artist portal."
+      },
+      {
+        number: "02",
+        title: "In-Person Verification Visit",
+        description: "An InkTrail team member visits the studio to verify hygiene protocols, autoclave/sterilization, and needle disposal."
+      },
+      {
+        number: "03",
+        title: "Certification Badge Awarded",
+        description: "Approved artists receive the verified INKTRΛIL badge, giving international travelers peace of mind and confidence."
+      }
+    ],
+    disclaimer: "Disclaimer: InkTrail does not verify licenses, certifications, or health standards unless explicitly stated. Certification indicates fulfillment of InkTrail internal review criteria and community trust indicators, but does not constitute a legal certification or medical guarantee."
+  },
+
+  // Visual Discovery Section (SOW Section 3.6)
+  gallery: {
+    eyebrow: "VISUAL DISCOVERY",
+    title: "Artistry, Culture & Destinations",
+    subtitle: "Explore the connection between travel, artistic discovery, and world-class tattoo culture.",
+    items: [
+      {
+        id: "tattoo-studio",
+        title: "Dragon & Peony Illustrative Art",
+        category: "Neo-Traditional & Japanese",
+        imageWebp: "assets/gallery/tattoo-studio.webp",
+        imageJpg: "assets/gallery/tattoo-studio.jpg",
+        alt: "Intricate black and grey Japanese dragon and peony floral tattoo"
+      },
+      {
+        id: "fine-line",
+        title: "Mythological Samurai Backpiece",
+        category: "Full Backpiece & Irezumi",
+        imageWebp: "assets/gallery/fine-line.webp",
+        imageJpg: "assets/gallery/fine-line.jpg",
+        alt: "Masterful full-back Japanese style samurai cat and koi tattoo"
+      },
+      {
+        id: "artist-craft",
+        title: "Delicate Botanical Fine Line",
+        category: "Fine Line & Minimalist",
+        imageWebp: "assets/gallery/artist-craft.webp",
+        imageJpg: "assets/gallery/artist-craft.jpg",
+        alt: "Delicate fine line floral peony forearm tattoo with stippling"
+      },
+      {
+        id: "blackwork",
+        title: "Bold Blackwork & Sacred Geometry",
+        category: "Blackwork & Sacred Geometry",
+        imageWebp: "assets/gallery/blackwork.webp",
+        imageJpg: "assets/gallery/blackwork.jpg",
+        alt: "Bold blackwork tattoo sleeve with sacred geometry and mandala patterns"
+      },
+      {
+        id: "travel-ink",
+        title: "Precision Craftsmanship & Session",
+        category: "Artist in Session",
+        imageWebp: "assets/gallery/travel-ink.webp",
+        imageJpg: "assets/gallery/travel-ink.jpg",
+        alt: "Professional tattoo artist using rotary machine in a clean studio session"
+      },
+      {
+        id: "custom-design",
+        title: "Custom Flash & Bespoke Ink",
+        category: "Custom Design & Flash",
+        imageWebp: "assets/gallery/custom-design.webp",
+        imageJpg: "assets/gallery/custom-design.jpg",
+        alt: "Tattoo artist workbench with hand-drawn traditional flash sheets and rotary machine"
+      }
+    ]
+  },
+
+  // Frequently Asked Questions
+  faq: {
+    eyebrow: "FREQUENTLY ASKED QUESTIONS",
+    title: "Common Questions About InkTrail",
+    items: [
+      {
+        question: "What is InkTrail and who is it for?",
+        answer: "InkTrail connects travelers with professional tattoo artists worldwide. It allows travelers to discover artists by city, browse authentic styles, and connect with verified talent for unforgettable travel ink."
+      },
+      {
+        question: "Is InkTrail free to use for travelers?",
+        answer: "Yes, browsing portfolios, discovering artists, exploring styles, and accessing contact details is completely free for all travelers."
+      },
+      {
+        question: "How do tattoo artists join InkTrail?",
+        answer: "Tattoo artists can join by clicking 'Create a Profile'. You can set up your profile, upload your portfolio, list your styles and spoken languages, and start receiving inquiries from travelers."
+      },
+      {
+        question: "What does the InkTrail Certified badge mean?",
+        answer: "InkTrail Certified is an internal trust indicator awarded after a personal review of the studio's hygiene standards, sterilization procedures, safety practices, and professionalism."
+      },
+      {
+        question: "Where can I download the mobile application?",
+        answer: "The InkTrail iOS application is available on the Apple App Store via our Download page. The Android version for Google Play is currently in development."
+      }
+    ]
+  },
+
+  // Final Call to Action (SOW Section 3.7)
+  finalCta: {
+    headline: "Travel the World. Get Inked with Confidence.",
+    subtitle: "Join the growing global community of travelers and passionate tattoo artists on InkTrail.",
+    buttons: {
+      findArtist: "Find Artist",
+      createProfile: "Create a Profile",
+      downloadApp: "Download the App"
+    }
+  },
+
+  // Footer Navigation & Legal Links (SOW Section 7)
+  footer: {
+    about: "InkTrail is the global platform connecting traveling souls with master tattoo artists worldwide. Travel, discover, and get inked with confidence.",
+    copyright: "© 2026 INKTRΛIL. All rights reserved.",
+    links: [
+      { label: "Find Artist", url: "https://d72921c3b2.draftbit.dev/search" },
+      { label: "Artist Portal", url: "https://d72921c3b2.draftbit.dev/portal" },
+      { label: "Download App", url: "download.html" },
+      { label: "Terms & Conditions", url: "terms.html" },
+      { label: "Privacy Policy", url: "privacy.html" },
+      { label: "Support", url: "support.html" },
+      { label: "Delete Account", url: "delete-account.html" }
+    ]
+  }
+};

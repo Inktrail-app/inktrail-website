@@ -1,0 +1,9 @@
+# robots.txt for https://inktrailapp.com/
+User-agent: *
+Allow: /
+
+# Prevent indexing of internal dev files or system artifacts
+Disallow: /CNAME
+
+# Sitemap reference
+Sitemap: https://inktrailapp.com/sitemap.xml
