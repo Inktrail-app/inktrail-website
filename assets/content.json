@@ -9,7 +9,7 @@
   "brand": {
     "name": "INKTRΛIL",
     "tagline": "Travel the World. Discover Your Next Tattoo.",
-    "subTagline": "Travel. Discover. Get inked.",
+    "subTagline": "Travel. Discover. Get Inked.",
     "logoFull": "assets/logo-parfait-or.jpg",
     "logoMark": "assets/logo-mark.jpg",
     "supportEmail": "inktrailapp@gmail.com"
@@ -43,9 +43,10 @@
   },
   "hero": {
     "badge": "The Global Tattoo Discovery Network",
-    "headline": "Travel the World. Discover Your Next Tattoo.",
-    "subtitle": "Discover tattoo artists, explore unique styles, and find your next tattoo wherever your journey takes you.",
-    "note": "Connecting travelers with verified tattoo talent across top destinations worldwide."
+    "logo": "assets/logo-parfait-or.jpg",
+    "headline": "Travel. Discover. Get Inked.",
+    "subtitle": "Connect with certified tattoo artists worldwide, explore authentic styles, and book your next piece wherever your journey takes you.",
+    "note": "In-person hygiene reviewed studios • Direct artist inquiries • 100% free for travelers"
   },
   "whatIs": {
     "eyebrow": "WHAT IS INKTRΛIL?",
@@ -145,7 +146,8 @@
     "eyebrow": "TRUST & STANDARDS",
     "title": "The InkTrail Certified Standard",
     "badgeLabel": "INKTRΛIL CERTIFIED",
-    "lead": "The InkTrail Certified badge helps travelers identify artists and studios who have been personally reviewed by the InkTrail team.",
+    "badgeImage": "assets/badge-certified.svg",
+    "lead": "The InkTrail Certified seal helps travelers identify artists and studios who have been personally reviewed by the InkTrail team.",
     "explanation": "Becoming InkTrail Certified requires a visit from the InkTrail team to verify your studio's hygiene standards, sterilization procedures, safety practices, and professionalism. Artists who meet our standards receive the official INKTRΛIL Certified badge on their profile.",
     "steps": [
       {
@@ -220,6 +222,29 @@
         "alt": "Tattoo artist workbench with hand-drawn traditional flash sheets and rotary machine"
       }
     ]
+  },
+  "aboutDamien": {
+    "eyebrow": "THE STORY BEHIND INKTRAIL",
+    "title": "Who’s Damien?",
+    "tagline": "Backpacker on a mission to get a tattoo in every country I visit.",
+    "photo": "assets/damien.jpg",
+    "photoWebp": "assets/damien.webp",
+    "photoAlt": "Damien, backpacker and founder of InkTrail",
+    "paragraphs": [
+      "Hey, I’m Damien! As an avid backpacker, I set off with an ambition close to my heart: to collect an authentic, custom tattoo in every single country I set foot in across the globe.",
+      "During my travels across different continents, I discovered how hard it really was to find genuine, verified tattoo artists in an unfamiliar city. Between erratic social algorithms, language barriers, and uncertainty about hygiene standards, what should have been an unforgettable travel souvenir often turned into a stressful search.",
+      "That’s why I created InkTrail. It’s built for travelers and wanderers like you — connecting you directly with trusted, in-person reviewed tattoo studios and extraordinary artists worldwide, so every journey leaves an unforgettable memory etched into your skin."
+    ],
+    "stats": [
+      { "value": "100+", "label": "Target Countries" },
+      { "value": "1 Tattoo", "label": "Per Country Visited" },
+      { "value": "In-Person", "label": "Studio Reviews" }
+    ],
+    "quote": "“A travel tattoo isn’t just ink — it’s a permanent reminder of a country, a culture, and the people who welcomed you.”",
+    "author": "— Damien, Creator of InkTrail",
+    "ctaExplore": "Explore Artists Worldwide",
+    "ctaInstagram": "Follow the Journey",
+    "instagramUrl": "https://www.instagram.com/inktrail.app/"
   },
   "faq": {
     "eyebrow": "FREQUENTLY ASKED QUESTIONS",

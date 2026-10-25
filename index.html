@@ -113,6 +113,7 @@
           <li><a href="#artists" class="nav-link">Tattoo Artists</a></li>
           <li><a href="#certification" class="nav-link">Certification</a></li>
           <li><a href="#gallery" class="nav-link">Visual Discovery</a></li>
+          <li><a href="#damien" class="nav-link">Who's Damien?</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
 
@@ -147,6 +148,11 @@
     <!-- 3.1 Hero Section -->
     <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="container">
+        <!-- Client Adjustment 1: InkTrail Logo at the top before "Travel. Discover. Get Inked." -->
+        <div class="hero-brand-top">
+          <img src="assets/logo-parfait-or.jpg" alt="INKTRΛIL" class="hero-brand-logo" width="360" height="66" />
+        </div>
+
         <div class="hero-badge-wrap">
           <span class="hero-badge">
             <span class="hero-badge-dot" aria-hidden="true"></span>
@@ -154,9 +160,9 @@
           </span>
         </div>
 
-        <h1 id="hero-title" class="hero-headline">Travel. Discover. Get Inked.</h1>
-        <p class="hero-subtitle">
-          Discover tattoo artists, explore unique styles, and find the right artist for your next tattoo, wherever you go.
+        <h1 id="hero-title" class="hero-headline" data-content="hero-headline">Travel. Discover. Get Inked.</h1>
+        <p class="hero-subtitle" data-content="hero-subtitle">
+          Connect with certified tattoo artists worldwide, explore authentic styles, and book your next piece wherever your journey takes you.
         </p>
 
         <!-- The Three Primary Call-to-Action Buttons (SOW Section 4) -->
@@ -210,9 +216,9 @@
       <div class="container">
         <div class="section-header">
           <div class="eyebrow">WHAT IS INKTRΛIL?</div>
-          <h2 id="whatis-title" class="section-title">Connecting Travelers with Trusted Tattoo Artists.</h2>
+          <h2 id="whatis-title" class="section-title">Bridging Wandering Souls & Master Tattoo Artists</h2>
           <p class="section-lead">
-            InkTrail helps travelers discover local tattoo artists and gives artists the opportunity to showcase their work and reach an international audience.
+            InkTrail is the dedicated global platform engineered specifically for travelers seeking authentic ink and tattoo artists looking to expand their international reach.
           </p>
         </div>
 
@@ -251,7 +257,7 @@
           <div class="eyebrow">FOR TRAVELERS & ENTHUSIASTS</div>
           <h2 id="travelers-title" class="section-title">Why Travelers Choose InkTrail</h2>
           <p class="section-lead">
-            Every journey tells a story. Turn your travel memories into lasting art with InkTrail.
+            Every journey tells a story. Etch your most meaningful travel moments into permanent art with the world's most trusted tattoo discovery platform.
           </p>
         </div>
 
@@ -272,7 +278,7 @@
             </div>
             <div class="benefit-card-content">
               <h3>Explore Artists & Tattoo Styles</h3>
-              <p>Browse curated galleries categorized by technique, from delicate single-needle fine line to vibrant neo-traditional.</p>
+              <p>Browse curated galleries categorized by technique—from delicate single-needle fine line to vibrant neo-traditional.</p>
             </div>
           </div>
 
@@ -418,13 +424,13 @@
         <div class="cert-card">
           <div class="cert-card-header">
             <div class="cert-badge-visual">
-              <img src="assets/logo-mark.jpg" alt="InkTrail Certified Badge" width="80" height="80" />
+              <img src="assets/badge-certified.svg" alt="InkTrail Official Certified Badge" class="cert-official-badge" width="76" height="76" />
             </div>
             <div>
-              <span class="eyebrow" style="margin-bottom:4px;">VERIFIED REVIEW</span>
-              <h3 class="cert-badge-title">InkTrail Certified Badge</h3>
+              <span class="eyebrow" style="margin-bottom:4px;">IN-PERSON VERIFIED REVIEW</span>
+              <h3 class="cert-badge-title">InkTrail Certified Standard</h3>
               <p style="color:var(--text-muted); font-size:0.95rem;">
-                The InkTrail Certified badge helps travelers identify artists and studios who have been personally reviewed by the InkTrail team.
+                The InkTrail Certified seal helps travelers identify artists and studios who have been personally reviewed by the InkTrail team.
               </p>
             </div>
           </div>
@@ -557,6 +563,75 @@
           </button>
 
           <div class="gallery-dots" role="tablist" aria-label="Slide indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.6b Founder Story: Who's Damien? (Client Adjustment #3) -->
+    <section class="section section-alt" id="damien" aria-labelledby="damien-title">
+      <div class="container">
+        <div class="damien-card">
+          <div class="damien-visual-col">
+            <div class="damien-photo-wrap">
+              <picture>
+                <source srcset="assets/damien.webp" type="image/webp" />
+                <img src="assets/damien.jpg" alt="Damien, backpacker and founder of InkTrail" class="damien-photo" width="400" height="400" id="damien-img" loading="lazy" />
+              </picture>
+              <div class="damien-badge-pill">
+                <span class="damien-badge-dot" aria-hidden="true"></span>
+                <span>Backpacker &amp; Founder</span>
+              </div>
+            </div>
+            <div class="damien-stats-strip">
+              <div class="damien-stat-item">
+                <div class="damien-stat-val" data-content="damien-stat-1-val">100+</div>
+                <div class="damien-stat-lbl" data-content="damien-stat-1-lbl">Target Countries</div>
+              </div>
+              <div class="damien-stat-item">
+                <div class="damien-stat-val" data-content="damien-stat-2-val">1 Tattoo</div>
+                <div class="damien-stat-lbl" data-content="damien-stat-2-lbl">Per Country Visited</div>
+              </div>
+              <div class="damien-stat-item">
+                <div class="damien-stat-val" data-content="damien-stat-3-val">In-Person</div>
+                <div class="damien-stat-lbl" data-content="damien-stat-3-lbl">Studio Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="damien-content-col">
+            <div class="eyebrow" data-content="damien-eyebrow">THE STORY BEHIND INKTRAIL</div>
+            <h2 id="damien-title" class="section-title damien-title" data-content="damien-title">Who’s Damien?</h2>
+            <p class="damien-lead" data-content="damien-tagline">
+              Backpacker on a mission to get a tattoo in every country I visit.
+            </p>
+
+            <div class="damien-bio-text" data-content="damien-bio">
+              <p>
+                Hey, I’m Damien! As an avid backpacker, I set off with an ambition close to my heart: to collect an authentic, custom tattoo in every single country I set foot in across the globe.
+              </p>
+              <p>
+                During my travels across different continents, I discovered how hard it really was to find genuine, verified tattoo artists in an unfamiliar city. Between erratic social algorithms, language barriers, and uncertainty about hygiene standards, what should have been an unforgettable travel souvenir often turned into a stressful search.
+              </p>
+              <p>
+                That’s why I created InkTrail. It’s built for travelers and wanderers like you — connecting you directly with trusted, in-person reviewed tattoo studios and extraordinary artists worldwide, so every journey leaves an unforgettable memory etched into your skin.
+              </p>
+            </div>
+
+            <blockquote class="damien-quote" data-content="damien-quote">
+              <p>“A travel tattoo isn’t just ink — it’s a permanent reminder of a country, a culture, and the people who welcomed you.”</p>
+              <cite>— Damien, Creator of InkTrail</cite>
+            </blockquote>
+
+            <div class="damien-actions">
+              <a class="btn btn-primary" href="https://d72921c3b2.draftbit.dev/search" target="_blank" rel="noopener noreferrer" data-content="cta-find-artist">
+                Explore Artists Worldwide
+              </a>
+              <a class="btn btn-ghost" href="https://www.instagram.com/inktrail.app/" target="_blank" rel="noopener noreferrer" data-content="social-instagram" aria-label="Follow Damien on Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Follow the Journey
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

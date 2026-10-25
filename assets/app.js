@@ -247,4 +247,42 @@ function hydrateContent() {
       if (c.primaryButtons.downloadApp.label) el.textContent = c.primaryButtons.downloadApp.label;
     });
   }
+
+  // Sync Hero Section
+  if (c.hero) {
+    if (c.hero.headline) {
+      document.querySelectorAll('[data-content="hero-headline"]').forEach(el => el.innerHTML = c.hero.headline);
+    }
+    if (c.hero.subtitle) {
+      document.querySelectorAll('[data-content="hero-subtitle"]').forEach(el => el.textContent = c.hero.subtitle);
+    }
+  }
+
+  // Sync Founder Story: Who's Damien?
+  if (c.aboutDamien) {
+    const d = c.aboutDamien;
+    if (d.eyebrow) document.querySelectorAll('[data-content="damien-eyebrow"]').forEach(el => el.textContent = d.eyebrow);
+    if (d.title) document.querySelectorAll('[data-content="damien-title"]').forEach(el => el.textContent = d.title);
+    if (d.tagline) document.querySelectorAll('[data-content="damien-tagline"]').forEach(el => el.textContent = d.tagline);
+    if (d.quote) {
+      document.querySelectorAll('[data-content="damien-quote"] p').forEach(el => el.textContent = d.quote);
+      document.querySelectorAll('[data-content="damien-quote"] cite').forEach(el => el.textContent = d.author || "— Damien, Creator of InkTrail");
+    }
+    if (d.photo) {
+      const img = document.getElementById('damien-img');
+      if (img) img.src = d.photo;
+    }
+    if (d.photoAlt) {
+      const img = document.getElementById('damien-img');
+      if (img) img.alt = d.photoAlt;
+    }
+    if (d.stats && Array.isArray(d.stats)) {
+      d.stats.forEach((st, idx) => {
+        const valEl = document.querySelector(`[data-content="damien-stat-${idx+1}-val"]`);
+        const lblEl = document.querySelector(`[data-content="damien-stat-${idx+1}-lbl"]`);
+        if (valEl && st.value) valEl.textContent = st.value;
+        if (lblEl && st.label) lblEl.textContent = st.label;
+      });
+    }
+  }
 }

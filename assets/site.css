@@ -84,7 +84,8 @@ body::before {
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% auto;
-  opacity: 0.035;
+  opacity: 0.075;
+  mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 0;
 }
@@ -431,6 +432,33 @@ a:focus-visible, button:focus-visible {
   position: relative;
 }
 
+.hero-brand-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 24px auto;
+}
+
+.hero-brand-logo {
+  max-width: 360px;
+  width: 78%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(18, 17, 16, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.hero-brand-logo:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .hero-brand-logo {
+    max-width: 250px;
+    width: 74%;
+  }
+}
+
 .hero-badge-wrap {
   margin-bottom: 20px;
 }
@@ -713,22 +741,28 @@ a:focus-visible, button:focus-visible {
 
 .cert-badge-visual {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--brand-black);
-  border: 2px solid var(--gold);
+  width: 76px;
+  height: 76px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  box-shadow: var(--shadow-gold);
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
 }
-.cert-badge-visual img {
+.cert-badge-visual:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+.cert-badge-visual img,
+.cert-official-badge {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: 0;
+  filter: drop-shadow(0 4px 14px rgba(196, 154, 88, 0.35));
 }
 
 .cert-badge-title {
@@ -943,6 +977,203 @@ a:focus-visible, button:focus-visible {
   background: var(--gold);
   width: 24px;
   border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   3.6b Founder Story: Who's Damien? (Client Adjustment #3)
+   -------------------------------------------------------------------------- */
+.damien-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 44px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.damien-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(196, 154, 88, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.damien-visual-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.damien-photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(18, 17, 16, 0.14);
+  border: 2px solid var(--border-gold);
+  background: var(--brand-black);
+  aspect-ratio: 1 / 1;
+}
+
+.damien-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.damien-photo-wrap:hover .damien-photo {
+  transform: scale(1.03);
+}
+
+.damien-badge-pill {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(18, 17, 16, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--gold-light);
+  border: 1px solid var(--border-gold);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.damien-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold);
+}
+
+.damien-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: rgba(196, 154, 88, 0.08);
+  border: 1px solid rgba(196, 154, 88, 0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.damien-stat-val {
+  font-family: var(--heading-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.damien-stat-lbl {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.damien-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.damien-title {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.damien-lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.damien-bio-text {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.damien-quote {
+  margin: 0 0 24px 0;
+  padding: 16px 20px;
+  background: rgba(196, 154, 88, 0.06);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.damien-quote p {
+  margin: 0 0 6px 0;
+  font-family: var(--heading-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--brand-black);
+  line-height: 1.5;
+}
+
+.damien-quote cite {
+  font-family: var(--safe-sans);
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--gold-dark);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.damien-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 980px) {
+  .damien-card {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+    gap: 32px;
+  }
+  .damien-visual-col {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .damien-title {
+    text-align: center;
+  }
+  .damien-lead {
+    text-align: center;
+  }
+  .damien-actions {
+    justify-content: center;
+  }
 }
 
 /* FAQ Accordion Styling */

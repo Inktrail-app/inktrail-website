@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" aria-label="InkTrail Certified Badge">
+  <defs>
+    <linearGradient id="certGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DEB86A" />
+      <stop offset="50%" stop-color="#C49A58" />
+      <stop offset="100%" stop-color="#A67C38" />
+    </linearGradient>
+    <filter id="certGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(196, 154, 88, 0.3)" />
+    </filter>
+  </defs>
+  
+  <g filter="url(#certGlow)">
+    <!-- Scalloped Rosette Badge Outline (Artist Profile Standard) -->
+    <path d="M 60.00 12.50 C 66.47 12.50, 67.00 21.27, 72.05 22.91 C 77.10 24.55, 82.69 17.77, 87.92 21.57 C 93.15 25.37, 88.43 32.78, 91.55 37.08 C 94.67 41.37, 103.18 39.17, 105.18 45.32 C 107.17 51.47, 99.00 54.69, 99.00 60.00 C 99.00 65.31, 107.17 68.53, 105.18 74.68 C 103.18 80.83, 94.67 78.63, 91.55 82.92 C 88.43 87.22, 93.15 94.63, 87.92 98.43 C 82.69 102.23, 77.10 95.45, 72.05 97.09 C 67.00 98.73, 66.47 107.50, 60.00 107.50 C 53.53 107.50, 53.00 98.73, 47.95 97.09 C 42.90 95.45, 37.31 102.23, 32.08 98.43 C 26.85 94.63, 31.57 87.22, 28.45 82.92 C 25.33 78.63, 16.82 80.83, 14.82 74.68 C 12.83 68.53, 21.00 65.31, 21.00 60.00 C 21.00 54.69, 12.83 51.47, 14.82 45.32 C 16.82 39.17, 25.33 41.37, 28.45 37.08 C 31.57 32.78, 26.85 25.37, 32.08 21.57 C 37.31 17.77, 42.90 24.55, 47.95 22.91 C 53.00 21.27, 53.53 12.50, 60.00 12.50 Z" stroke="url(#certGoldGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <!-- Verified Center Checkmark -->
+    <path d="M 43.5 60 L 53 70 L 76.5 46.5" stroke="url(#certGoldGrad)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+</svg>

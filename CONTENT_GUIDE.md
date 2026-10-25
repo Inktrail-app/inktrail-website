@@ -98,7 +98,39 @@ Place your new image file in `assets/gallery/` and reference its path here.
 
 ---
 
-### 6. Updating Technical SEO & Page Metadata
+### 6. Updating "Who's Damien?" (Photo & Story)
+You can easily update your photo, bio, tagline, quote, and travel stats in `assets/content.js`:
+
+#### A. Replacing Your Photo:
+1. Save your new photo file as `assets/damien.jpg` (replacing the current placeholder).
+2. If using a different filename, open `assets/content.js` and update:
+   ```javascript
+   aboutDamien: {
+     photo: "assets/your-new-photo.jpg",
+     photoAlt: "Damien, founder of InkTrail"
+   }
+   ```
+
+#### B. Editing Your Story & Bio:
+Look for the `aboutDamien` section in `assets/content.js`:
+```javascript
+aboutDamien: {
+  title: "Who’s Damien?",
+  tagline: "Backpacker on a mission to get a tattoo in every country I visit.",
+  paragraphs: [
+    "Your story paragraph 1...",
+    "Your story paragraph 2...",
+    "Your story paragraph 3..."
+  ],
+  quote: "“Your favorite personal quote...”",
+  author: "— Damien, Creator of InkTrail"
+}
+```
+Simply edit any text between the quotation marks `""` and save. Changes appear immediately on the website!
+
+---
+
+### 7. Updating Technical SEO & Page Metadata
 In `assets/content.js`, you can adjust the title, description, and keywords:
 ```javascript
 meta: {
