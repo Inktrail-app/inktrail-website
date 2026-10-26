@@ -436,7 +436,28 @@ a:focus-visible, button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 20px auto;
+}
+
+.hero-brand-round {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(196, 154, 88, 0.28));
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.hero-brand-round:hover {
+  transform: translateY(-3px) scale(1.04);
+  filter: drop-shadow(0 8px 24px rgba(196, 154, 88, 0.42));
+}
+
+@media (max-width: 768px) {
+  .hero-brand-round {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .hero-brand-logo {
@@ -650,6 +671,19 @@ a:focus-visible, button:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
+}
+
+/* Symmetrical 2x2 grid for 4 traveler benefit cards */
+#travelers .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  #travelers .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .benefit-card {

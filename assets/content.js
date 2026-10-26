@@ -70,7 +70,7 @@ window.INKTRAIL_CONTENT = {
   // Hero Section (SOW Section 3.1 & Client Adjustment #1)
   hero: {
     badge: "The Global Tattoo Discovery Network",
-    logo: "assets/logo-parfait-or.jpg",
+    logo: "assets/logo-round-needle.png",
     headline: "Travel. Discover. Get Inked.",
     subtitle: "Connect with certified tattoo artists worldwide, explore authentic styles, and book your next piece wherever your journey takes you.",
     note: "In-person hygiene reviewed studios • Direct artist inquiries • 100% free for travelers"
@@ -116,11 +116,6 @@ window.INKTRAIL_CONTENT = {
         icon: "layers",
         title: "Explore Styles Across Destinations",
         description: "Browse portfolios filtered by aesthetic—from delicate Fine Line and Micro-Realism to Bold Blackwork and Traditional."
-      },
-      {
-        icon: "bookmark",
-        title: "Inspiration Tied to Travel Memories",
-        description: "Find local cultural inspiration and bespoke flash designs created specifically for travelers seeking lasting souvenirs."
       },
       {
         icon: "sparkles",
