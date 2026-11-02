@@ -17,12 +17,12 @@
   "primaryButtons": {
     "findArtist": {
       "label": "Find Artist",
-      "url": "https://d72921c3b2.draftbit.dev/search",
+      "url": "https://app.inktrailapp.com/search",
       "description": "Directs visitors to search for tattoo artists on the web app"
     },
     "createProfile": {
       "label": "Create a Profile",
-      "url": "https://d72921c3b2.draftbit.dev/portal",
+      "url": "https://app.inktrailapp.com/account-type",
       "description": "Directs tattoo artists to the profile creation portal"
     },
     "downloadApp": {
@@ -282,11 +282,11 @@
     "links": [
       {
         "label": "Find Artist",
-        "url": "https://d72921c3b2.draftbit.dev/search"
+        "url": "https://app.inktrailapp.com/search"
       },
       {
         "label": "Artist Portal",
-        "url": "https://d72921c3b2.draftbit.dev/portal"
+        "url": "https://app.inktrailapp.com/account-type"
       },
       {
         "label": "Download App",
