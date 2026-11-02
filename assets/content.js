@@ -38,12 +38,12 @@ window.INKTRAIL_CONTENT = {
   primaryButtons: {
     findArtist: {
       label: "Find Artist",
-      url: "https://d72921c3b2.draftbit.dev/search",
+      url: "https://app.inktrailapp.com/search",
       description: "Directs visitors to search for tattoo artists on the web app"
     },
     createProfile: {
       label: "Create a Profile",
-      url: "https://d72921c3b2.draftbit.dev/portal",
+      url: "https://app.inktrailapp.com/account-type",
       description: "Directs tattoo artists to the profile creation portal"
     },
     downloadApp: {
@@ -325,8 +325,8 @@ window.INKTRAIL_CONTENT = {
     about: "InkTrail is the global platform connecting traveling souls with master tattoo artists worldwide. Travel, discover, and get inked with confidence.",
     copyright: "© 2026 INKTRΛIL. All rights reserved.",
     links: [
-      { label: "Find Artist", url: "https://d72921c3b2.draftbit.dev/search" },
-      { label: "Artist Portal", url: "https://d72921c3b2.draftbit.dev/portal" },
+      { label: "Find Artist", url: "https://app.inktrailapp.com/search" },
+      { label: "Artist Portal", url: "https://app.inktrailapp.com/account-type" },
       { label: "Download App", url: "download.html" },
       { label: "Terms & Conditions", url: "terms.html" },
       { label: "Privacy Policy", url: "privacy.html" },
