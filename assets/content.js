@@ -64,7 +64,7 @@ window.INKTRAIL_CONTENT = {
   // App Store Links
   appLinks: {
     ios: "https://apps.apple.com/us/app/inktr%CE%BBil/id6799230498",
-    android: "#" // Set to official Google Play URL when published
+    android: "https://play.google.com/store/apps/details?id=com.inktrailapp.inktrail&hl=en-US" // Set to official Google Play URL when published
   },
 
   // Hero Section (SOW Section 3.1 & Client Adjustment #1)
