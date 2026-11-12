@@ -57,9 +57,12 @@
         if (isAndroid) {
           // Android -> Direct Google Play
           location.replace(ANDROID_URL);
-           return;
-          }
+          return;
+        } else {
+          document.documentElement.classList.add("show-fallback");
+          return;
         }
+      }
         // Desktop / Other devices -> show download card
         document.documentElement.classList.add("show-fallback");
       } catch (err) {
