@@ -55,13 +55,9 @@
           return;
         }
         if (isAndroid) {
-          // Android -> Google Play if configured
-          if (isValidUrl(ANDROID_URL) && ANDROID_URL !== "https://play.google.com/store/apps/details?id=com.inktrailapp.inktrail&hl=en-US") {
-            location.replace(ANDROID_URL);
-            return;
-          } else {
-            document.documentElement.classList.add("show-fallback");
-            return;
+          // Android -> Direct Google Play
+          location.replace(ANDROID_URL);
+           return;
           }
         }
         // Desktop / Other devices -> show download card
