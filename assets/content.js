@@ -17,8 +17,8 @@
 window.INKTRAIL_CONTENT = {
   // Website Metadata & SEO
   meta: {
-    siteTitle: "INKTRΛIL — Connect with Tattoo Artists Worldwide | Travel & Inking Platform",
-    description: "Discover certified tattoo artists, explore authentic styles, and book your next tattoo wherever you travel. The premier global platform connecting travelers and tattoo artists.",
+    siteTitle: "INKTRΛIL — Find Trusted Tattoo Artists in Latin America",
+    description: "Looking for a tattoo artist in Latin America? Discover trusted local tattoo artists, explore their portfolios and find the right artist for your next tattoo with InkTrail.",
     canonicalUrl: "https://inktrailapp.com/",
     siteName: "INKTRΛIL",
     keywords: "tattoo artists, travel tattoo, find tattoo artist, tattoo directory, guest spot tattoo, ink trail, tattoo styles, fine line tattoo, ink travel"
